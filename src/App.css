@@ -1,0 +1,240 @@
+/* Resets e Configurações Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* Paleta de Cores: Azul Tech e Prata */
+:root {
+  --primary-blue: #0a192f;
+  --secondary-blue: #112240;
+  --accent-silver: #c0c0c0;
+  --text-light: #e6f1ff;
+  --white: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: var(--primary-blue);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-silver);
+}
+
+/* Seções Padrão */
+section {
+  padding: 100px 5% 60px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary-blue);
+}
+
+/* Home / Hero */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: var(--white);
+  text-align: center;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-silver);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+/* Botões */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent-silver);
+  color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  margin-top: 15px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-blue);
+}
+
+/* Serviços */
+.services-section {
+  background-color: var(--white);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: 4px solid var(--primary-blue);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  color: var(--secondary-blue);
+  margin-bottom: 1rem;
+}
+
+/* Quem Somos */
+.about-section {
+  background-color: #eef2f5;
+  align-items: center;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Contato */
+.contact-section {
+  background-color: var(--white);
+  align-items: center;
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-blue);
+  color: var(--accent-silver);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .nav-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Contato */
+.contact-section {
+  background-color: var(--white);
+  align-items: center;
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 2;
+  width: 100%; 
+  max-width: 900px; /* Limita a largura do bloco e do mapa em telas de PC */
+}
+
+/* Estilo do Mapa */
+.map-container {
+  margin-top: 2rem;
+  width: 100%;
+  border-radius: 8px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que o mapa respeite a borda arredondada */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra elegante */
+}
