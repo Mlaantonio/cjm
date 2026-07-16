@@ -39,7 +39,7 @@ body {
 }
 
 .logo {
-  height: 50px;
+  height: 80px;
   width: auto;
 }
 
@@ -73,7 +73,11 @@ section h2 {
 
 /* Home / Hero */
 .hero-section {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  /* O gradiente (rgba) cria uma película escura translúcida por cima da imagem para garantir a leitura do texto */
+  background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(17, 34, 64, 0.90)), url('/fundo.png');
+  background-size: cover; /* Faz a imagem preencher toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Opcional: cria um efeito "Parallax" elegante ao rolar a página para baixo */
   color: var(--white);
   text-align: center;
   align-items: center;
@@ -181,7 +185,7 @@ section h2 {
 
 /* Footer */
 .footer {
-  background-color: var(--primary-blue);
+  background-color: #000000;
   color: var(--accent-silver);
   text-align: center;
   padding: 1.5rem;
@@ -218,8 +222,14 @@ section h2 {
 
 /* Contato */
 .contact-section {
-  background-color: var(--white);
+  background-color: #000000; /* Fundo preto */
+  color: var(--white); /* Texto em branco */
   align-items: center;
+}
+
+/* Sobrescreve a cor azul global do h2 apenas nesta seção */
+.contact-section h2 {
+  color: var(--white); 
 }
 
 .contact-info {
@@ -227,14 +237,15 @@ section h2 {
   font-size: 1.1rem;
   line-height: 2;
   width: 100%; 
-  max-width: 900px; /* Limita a largura do bloco e do mapa em telas de PC */
+  max-width: 900px;
 }
 
 /* Estilo do Mapa */
 .map-container {
   margin-top: 2rem;
   width: 100%;
-  border-radius: 8px; /* Bordas arredondadas */
-  overflow: hidden; /* Garante que o mapa respeite a borda arredondada */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra elegante */
+  border-radius: 8px;
+  overflow: hidden;
+  /* Sombra levemente mais clara (branca/cinza) para destacar no fundo preto */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); 
 }
