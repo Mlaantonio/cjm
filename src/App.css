@@ -194,6 +194,15 @@ section h2 {
 
 /* Responsividade para Celulares */
 @media (max-width: 768px) {
+  .hero-section {
+    /* Desativa o fundo fixo apenas no celular, mudando para 'scroll' */
+    background-attachment: scroll;
+    
+    /* Garante que a imagem continue cobrindo toda a área de forma centrada */
+    background-size: cover;
+    background-position: center;
+  }
+  
   .navbar {
     flex-direction: column;
     padding: 1rem;
