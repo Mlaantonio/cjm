@@ -1,6 +1,5 @@
 import './App.css';
 import logo from './logo.png';
-import Link from 'next/link';
 
 function App() {
   return (
@@ -15,8 +14,8 @@ function App() {
           <a href="#servicos">Serviços</a>
           <a href="#quem-somos">Quem Somos</a>
           <a href="#contato">Contato</a>
-          <Link href="/entrar">Entrar</Link>
-          <Link href="/cadastro">Cadastre-se</Link>
+          <a href="/entrar">Entrar</a>
+          <a href="/cadastro">Cadastre-se</a>
         </nav>
       </header>
 
