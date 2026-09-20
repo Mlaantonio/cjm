@@ -1,6 +1,6 @@
-import React from 'react';
 import './App.css';
 import logo from './logo.png';
+import Link from 'next/link';
 
 function App() {
   return (
@@ -15,6 +15,8 @@ function App() {
           <a href="#servicos">Serviços</a>
           <a href="#quem-somos">Quem Somos</a>
           <a href="#contato">Contato</a>
+          <Link href="/entrar">Entrar</Link>
+          <Link href="/cadastro">Cadastre-se</Link>
         </nav>
       </header>
 
@@ -63,7 +65,7 @@ function App() {
         <h2>Entre em Contato</h2>
         <div className="contact-info">
           <p><strong>Endereço: </strong> R. Caramurus, 200 - Jardim São Francisco, Santa Bárbara d'Oeste - SP</p>
-          <p><strong>Telefone/WhatsApp:</strong> <a href="tel:+551934556254" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-silver)', textDecoration: 'underline' }}>(19) 3455-6254</a></p>
+          <p><strong>Telefone/WhatsApp:</strong> <a href="tel:+5519983768189" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-silver)', textDecoration: 'underline' }}>(19) 3455-6254</a></p>
           <p><strong>E-mail: </strong><a href="mailto:contato@cjm.servicos.ws" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-silver)', textDecoration: 'underline' }}>contato@cjm.servicos.ws</a></p>
           
           {/* Contêiner do Mapa do Google */}
